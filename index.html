@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wxyBlog</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            margin: 20px auto;
+            background-color: #fff;
+        }
+
+        head {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+        }
+        .content{
+            background-color: #e8e8e8;
+            margin: 20px 100px;
+        }
+        nav h2 {
+            /* padding: 20px 100px; */
+            height: 50px;
+            line-height: 50px;
+            border-bottom: 2px solid #ccc;
+            text-align: center;
+        }
+        nav h2::before{
+            content: '';
+            
+        }
+
+        section {
+            padding: 20px ;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+
+        .project {
+            flex: 3;
+            background-color: #fff;
+            padding:10px;
+            margin:0 10px;
+            /* box-shadow: 0px 0px 0px 100px rgba(0, 0, 0, .3) inset; */
+      /* x，y，阴影模糊程度（一般是阴影大小4倍）， 阴影大小，颜色，阴影位置（inset内嵌） 默认外嵌（可不写)*/
+
+            /* position: relative; */
+        }
+
+        .project:hover mask {
+            display: block;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            
+            /* position: relative; */
+        }
+        .imgs{
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+        }
+
+        .imgs:hover {
+            z-index: 100;
+            transform: scale(1.2);
+            
+        }
+
+        .imgs::after{
+            content:'';
+            transition: all 1s ease;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: rgba(0, 0, 0, .3);
+        }
+
+        /* h3{display: none;} */
+        h3 {
+            /* display: none; */
+            /* position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%); */
+            color: #ccc;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 26px;
+            letter-spacing: 1px;
+            
+            /*文本阴影：x偏移距离 y偏移距离 阴影模糊程度 阴影颜色  */
+            /* text-shadow: 4px 0 2px  red; */
+            /* z-index: 999; */
+        }
+        h3:hover{
+            content: '';
+            text-shadow: 4px 0 2px  yellow;
+        }
+
+        .mask {
+            z-index: 101;
+            /* display: none; */
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .16);
+        }
+        .line{
+            width: 100px;
+            height: 2px;
+            border:2px solid skyblue;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+        <head>
+            <h1>This is Ahouvideo📺</h1>
+        </head>
+
+        <div class="content">
+            <nav>
+                <h2>👉 个人小案例 👈</h2>
+            </nav>
+            <section>
+                <div class="project">
+                    <img class="imgs"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRmdmFOo_xfWa_0quxc141t-IdedxDWDwdRjg&usqp=CAU"
+                        alt="">
+                    <h3>放大镜效果</h3>
+                    <!-- <box class="line"></box> -->
+                    <!-- <div class="mask"></div> -->
+                </div>
+                <div class="project">
+                    <img class="imgs"
+                        src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599548910277&di=97bd53141c2325eff86b2950cc284897&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180522%2F43f56c8c515d4f1a82718a8a37da2727.jpeg"
+                        alt="">
+                    <h3>轮播图效果</h3>
+                </div>
+                <div class="project">
+                    <img class="imgs"
+                        src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3734273011,3033629646&fm=26&gp=0.jpg"
+                        alt="">
+                    <h3>瀑布流原理</h3>
+                </div>
+            </section>
+        </div>
+
+        <div class="content">
+            <nav>
+                <h2>💡 个人项目 💡</h2>
+            </nav>
+            <section>
+                <div class="project">
+                    <img class="imgs"
+                        src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1556632046,742826362&fm=26&gp=0.jpg"
+                        alt="">
+
+                    
+                    <h3><a href="./onepickWeather/index.html" target="_blank">天气查</a></h3>
+                    
+                </div>
+                <div class="project">
+                    <img class="imgs"
+                        src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1000817916,2718930772&fm=26&gp=0.jpg"
+                        alt="">
+                    <h3>来一杯外卖</h3>
+                </div>
+                <div class="project">
+                    <img class="imgs"
+                        src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599560466428&di=16c5df64d218d042022ee2a3be0fe151&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20160908%2F322c0aaa61dd4224826d914031f43f43_th.jpg"
+                        alt="">
+                    <h3>gogo微信小程序商城</h3>
+                </div>
+            </section>
+        </div>
+
+        <footer></footer>
+    </div>
+</body>
+
+</html>
