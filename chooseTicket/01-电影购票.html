@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0 auto;
+    }
+    .fl{
+      float: left;
+    }
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .film-box{
+      width: 320px;
+      margin: 0 auto;
+    }
+    .row{
+      overflow: hidden;
+      padding: 10px;
+    }
+    .list{
+      overflow: hidden;
+    }
+    .list>li{
+      float: left;
+      width: 60px;
+      height: 34px;
+      background-color: #f2f2f2;
+      text-align: center;
+      line-height: 34px;
+      cursor: pointer;
+    }
+    .list>li.active{
+      background-color: #e4393c;
+      color: #fff;
+    }
+    .title{
+      width: 60px;
+      height: 34px;
+      line-height: 34px;
+      text-align: center;
+    }
+
+    .select-tag{
+      width: 100px;
+      height: 34px;
+      line-height: 34px;
+      text-align: center;
+      background-color: #e4393c;
+      color: #fff;
+      margin-bottom: 10px;
+      position: relative;
+    }
+    .select-tag>.del{
+      position: absolute;
+      right: -4px;
+      top: -4px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="film-box">
+    <div>
+      <div class="row">
+        <span class="fl title">1排</span>
+        <ul class="fl list" name="1">
+          <li>1座</li>
+          <li>2座</li>
+          <li>3座</li>
+          <li>4座</li>
+        </ul>
+      </div>
+      <div class="row">
+        <span class="fl title">2排</span>
+        <ul class="fl list" name="2">
+          <li>1座</li>
+          <li>2座</li>
+          <li>3座</li>
+          <li>4座</li>
+        </ul>
+      </div>
+      <div class="row">
+        <span class="fl title">3排</span>
+        <ul class="fl list" name="3">
+          <li>1座</li>
+          <li>2座</li>
+          <li>3座</li>
+          <li>4座</li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <h3>您的选座</h3>
+      <div class="tag">
+        
+      </div>
+    </div>
+
+  </div>
+  
+
+  <script src="./jquery-3.4.1.min.js"></script>
+  <script>
+    $(function () {
+
+      //座位绑定事件
+      $('.list>li').on('click', function () {
+        console.log('this ==> ', this);
+
+        //如果当前li已经是激活的，拦截
+        if ($(this).hasClass('active')) {
+          console.log('当前li已经是激活的');
+          return;
+        }
+
+        // 激活当前li
+        $(this).addClass('active');
+
+        //创建唯一标识, 时间戳
+        var onlyFlag = new Date().getTime();
+
+        //设置name属性
+        $(this).attr('name', onlyFlag);
+
+        //获取排号, 获取当前元素的父元素的name属性
+        var rowNum = $(this).parent().attr('name') + '排';
+        console.log('rowNum ==> ', rowNum);
+
+        //获取座位号
+        var colNum = $(this).text();
+
+        //创建标签
+        var tag = $('<div class="select-tag">' + (rowNum + colNum) + '<i class="del" name="' + onlyFlag + '"></i></div>');
+
+        $('.tag').append(tag);
+        
+      })
+
+    
+    
+      //删除选座
+      $('.tag').on('click', '.del', function () {
+        console.log('this ==> ', this);
+
+        //获取当前删除按钮的name属性
+        var name = $(this).attr('name');
+
+        //移除含有name属性的座位li
+        //属性选择器 [属性名称="属性值"]
+        $('li[name="' + name + '"]').removeClass('active');
+
+        //移除选座标签
+        $(this).parent().remove();
+      })
+
+    })
+  </script>
+</body>
+</html>
