@@ -1,258 +1,221 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wxyBlog</title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-
-        .box {
-            margin: 20px auto;
-            background-color: #fff;
-        }
-
-        head {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        a{
-            text-decoration: none;
-            color: #ccc;
-        }
-        h1 {
-            text-align: center;
-        }
-        .content{
-            background-color: #e8e8e8;
-            margin: 20px 100px;
-        }
-        nav h2 {
-            /* padding: 20px 100px; */
-            height: 80px;
-            line-height: 80px;
-            font-size: 30px;
-            border-bottom: 2px solid #ccc;
-            text-align: center;
-        }
-        nav h2::before{
-            content: '';
-            
-        }
-
-        section {
-            padding: 20px ;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            
-        }
-
-        .project {
-            flex: 3;
-            flex-wrap: wrap;
-            background-color: ivory;
-            padding:10px;
-            margin:0 10px;
-            margin-bottom: 10px;
-            /* box-shadow: 0px 0px 0px 100px rgba(0, 0, 0, .3) inset; */
-      /* x，y，阴影模糊程度（一般是阴影大小4倍）， 阴影大小，颜色，阴影位置（inset内嵌） 默认外嵌（可不写)*/
-
-            /* position: relative; */
-        }
-
-        .project:hover mask {
-            display: block;
-        }
-
-        img {
-            display: block;
-            width: 100%;
-            
-            /* position: relative; */
-        }
-        .imgs{
-            width: 300px;
-            height: 300px;
-            margin: 0 auto;
-        }
-
-        .imgs:hover {
-            z-index: 100;
-            transform: scale(1.2);
-            
-        }
-
-        .imgs::after{
-            content:'';
-            transition: all 1s ease;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: rgba(0, 0, 0, .3);
-        }
-
-        /* h3{display: none;} */
-        h3 {
-            /* display: none; */
-            /* position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%); */
-            color: #ccc;
-            margin-top: 20px;
-            text-align: center;
-            font-size: 26px;
-            letter-spacing: 1px;
-            
-            /*文本阴影：x偏移距离 y偏移距离 阴影模糊程度 阴影颜色  */
-            /* text-shadow: 4px 0 2px  red; */
-            /* z-index: 999; */
-        }
-        h3:hover{
-            content: '';
-            text-shadow: 4px 0 2px  yellow;
-        }
-
-        .mask {
-            z-index: 101;
-            /* display: none; */
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, .16);
-        }
-        .line{
-            width: 100px;
-            height: 2px;
-            border:2px solid skyblue;
-            background-color: skyblue;
-        }
-    </style>
+    <title>一只小王🙋‍嘤嘤嘤</title>
+    <meta name="theme-color" content="#ffc91d"/>
+    <meta name="description" content="这里是小王同学的魔法code" />
+	<meta name="author" content="一只小王英英子" />
+	<link rel="shortcut icon" href="./static/favicon.ico" type="image/x-icon" />
+    <!-- <link rel="icon" href="static/img/32.png" sizes="32x32"/> -->
+    <!-- <link rel="icon" href="static/img/192.png" sizes="192x192"/> -->
+    <link href="static/kico.css" rel="stylesheet" type="text/css"/>
+    <link href="static/moreduo.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
 </head>
-
 <body>
-    <div class="box">
-
-        <head>
-            <h1>This is Ahouvideo📺</h1>
-        </head>
-        <!-- 个人描述 -->
-        <div class="desc"></div>
-
-        
-
-        <div class="content">
-            <nav>
-                <h2>👉 个人分享 👈</h2>
-            </nav>
-            <section>
-                <div class="project">
-                    <a href="./startBack/startsback.html" target="_blank"><img class="imgs"
-                        src="https://s1.ax1x.com/2020/09/10/wGPk11.jpg"
-                        alt="">
-                    <h3>响应式网站⭐</h3></a>
-                    <!-- <box class="line"></box> -->
-                    <!-- <div class="mask"></div> -->
-                </div>
-                <div class="project">
-                    <a href="./zoom/zoom.html" target="_blank"><img class="imgs"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRmdmFOo_xfWa_0quxc141t-IdedxDWDwdRjg&usqp=CAU"
-                        alt="">
-                    <h3>放大镜效果</h3></a>
-                </div>
-                <div class="project">
-                    <a href="./waterfall/瀑布流布局.html" target="_blank"><img class="imgs"
-                        src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3734273011,3033629646&fm=26&gp=0.jpg"
-                        alt="">
-                    <h3>瀑布流布局</h3></a>
-                </div>
-                <div class="project">
-                    <a href="./planet/index.html" target="_blank"><img class="imgs"
-                        src="https://s1.ax1x.com/2020/09/10/w84khd.png"
-                        alt="">
-                    <h3>CSS3九大星系</h3></a>
-                </div>
-                <div class="project">
-                    <a href="./chooseTicket/01-电影购票.html" target="_blank"><img class="imgs"
-                        src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3863641969,2726609351&fm=26&gp=0.jpg"
-                        alt="">
-                    <h3>电影院选票JQ</h3></a>
-                </div>
-                <div class="project">
-                    <a href="./jsObjectgame/白块对象方法.html" target="_blank"><img class="imgs"
-                        src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2045337431,223602814&fm=26&gp=0.jpg"
-                        alt="">
-                    <h3>别踩白块小游戏(js面向对象)</h3></a>
-                </div>
-            </section>
-        </div>
-
-        <div class="content">
-            <nav>
-                <h2>💡 个人项目 💡</h2>
-            </nav>
-            <section>
-                <div class="project">
-                    <a href="./onepickWeather/index.html" target="_blank"><img class="imgs"
-                        src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1556632046,742826362&fm=26&gp=0.jpg"
-                        alt="">
-
-                    <h3>天气查</h3></a>
-                    
-                </div>
-                <div class="project">
-                    <a href="./oncup/index.html" target="_blank"><img class="imgs"
-                        src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1000817916,2718930772&fm=26&gp=0.jpg"
-                        alt="">
-                    <h3>来一杯外卖</h3></a>
-                </div>
-                <div class="project">
-                    <img class="imgs"
-                        src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599560466428&di=16c5df64d218d042022ee2a3be0fe151&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20160908%2F322c0aaa61dd4224826d914031f43f43_th.jpg"
-                        alt="">
-                    <h3>gogo微信小程序商城</h3>
-                </div>
-            </section>
-        </div>
-        <div class="content">
-            <nav>
-                <h2>📲 APICloud 📲</h2>
-            </nav>
-            <section>
-                <div class="project">
-                    <img class="imgs"
-                        src="https://s1.ax1x.com/2020/09/10/wGVzvj.png"
-                        alt="">
-
-                    <h3>天气查APP</h3>
-                    
-                </div>
-                <div class="project">
-                    <img class="imgs"
-                        src="https://s1.ax1x.com/2020/09/10/wGZZ24.png"
-                        alt="">
-                    <h3>来一杯外卖APP</h3>
-                </div>
-                <!-- <div class="project">
-                    <img class="imgs"
-                        src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599560466428&di=16c5df64d218d042022ee2a3be0fe151&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20160908%2F322c0aaa61dd4224826d914031f43f43_th.jpg"
-                        alt="">
-                    <h3>gogo微信小程序商城</h3>
-                </div> -->
-            </section>
-        </div>
-
-        <footer></footer>
+<aside class="sidebar">
+    <div class="avatar">
+        <img src="https://s1.ax1x.com/2020/09/14/wB6hvQ.jpg" title="一只小王英英子"/>
     </div>
-</body>
+    <nav class="nav">
+        <a href="#info">🙆‍♀️简介</a>
+        <a href="#skills">技能💡</a>
+        <a href="#works">📚分享</a>
+        <a href="#story">作品📃</a>
+        <!-- <a href="#team">团队</a> -->
+    </nav>
+</aside>
+<main>
+    <section id="info">
+        <div class="wrap">
+            <h1 class="title">This is 小王 codeHome~🌌</h1>
+            <div class="row">
+                <div class="col-l-4">
+                    <!-- <p>年龄：48</p> -->
+                    <p>QQ：986739895</p>
+                    <p>GitHub：<a href="https://github.com/ahouvideo/shoppingKindom" target="_blank">ahouvideo</a></p>
+                    <!-- <p>博客：<a href="http://www.wangdahai.cn">http://www.wangdahai.cn</a></p> -->
+                    <p>邮箱：<a href="mailto:986739895@qq.com">986739895@qq.com</a></p>
+                    
+                </div>
+                <div class="col-l-4">
+                    <div class="image">
+                        <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2175618572,2189647382&fm=26&gp=0.jpg" alt="小王元气满满💗" />
+                    </div>
+                    
+                </div>
+                <div class="col-l-4">
+                    <p>一名 <strong>物联网工程</strong> 的 <strong>前端开发工程师</strong> 
+                       <!-- <p> 爱待在 <strong>互联网</strong> 不知天高地厚</p></p> -->
+                    <p><strong>有追求的决心</strong> 🍒 <strong>有敢要的上进心</strong></p> 
+                    <p><strong>好看的皮囊千篇一律 有趣的灵魂万里挑一</strong>的一</p>
+                    <p>人生理想✍<strong>既懂技术又懂业务还会生活的复合型coder</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="skills">
+        <div class="wrap">
+            <h2 class="title">掌握的技能</h2>
+            <div class="row scrollable">
+                <div class="col-s-6 col-m-3 center-fixed">
+                    <div class="skills-icon">
+                        <i class="fa fa-html5"></i>
+                    </div>
+                    <div class="skills-title">
+                        <h3>HTML 5</h3>
+                        <p>熟悉 HTML5 网站架构和开发Bootstrap响应式框架</p>
+                    </div>
+                </div>
+                <div class="col-s-6 col-m-3 center-fixed">
+                    <div class="skills-icon">
+                        <i class="fa fa-css3"></i>
+                    </div>
+                    <div class="skills-title">
+                        <h3>CSS 3</h3>
+                        <p>熟悉使用 CSS3 、LESS写响应式网站、动画等</p>
+                    </div>
+                </div>
+                <div class="col-s-6 col-m-3 center-fixed">
+                    <div class="skills-icon">
+                        <i class="fa fa-code"></i>
+                    </div>
+                    <div class="skills-title">
+                        <h3>JavaScript</h3>
+                        <p>能使用 JS、JQ 制作简单的程序、AJAX交互与特效 </p>
+                    </div>
+                </div>
+                <div class="col-s-6 col-m-3 center-fixed">
+                    <div class="skills-icon">
+                        <i class="fa ">vue</i>
+                    </div>
+                    <div class="skills-title">
+                        <h3>VUE全家桶</h3>
+                        <p>能使用 Vue全家桶系列 制作单页面系统 </p>
+                    </div>
+                </div>
+                <!-- <div class="col-s-6 col-m-2 center-fixed">
+                    <div class="skills-icon">
+                        <i class="fa ">GIT</i>
+                    </div>
+                    <div class="skills-title">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div> -->
+                <!-- <div class="col-s-6 col-m-2 center-fixed">
+                    <div class="skills-icon">
+                        <i class="fa ">mysql</i>
+                    </div>
+                    <div class="skills-title">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+    </section>
+
+    <section id="works">
+        <div class="wrap">
+            <h2 class="title">📚分享</h2>
+            <div class="row">
+                <div class="col-s-6">
+                    <div class="works-item">
+                        <a href="./startBack/startsback.html" target="_blank">
+                        <img src="https://s1.ax1x.com/2020/09/10/wGPk11.jpg"/>
+                        <p>响应式网站⭐</p>
+                    </a>
+                    </div>
+                </div>
+                <div class="col-s-6">
+                    <div class="works-item">
+                        <a href="./zoom/zoom.html" target="_blank">
+                            <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2213202916,1422690592&fm=26&gp=0.jpg"/>
+                            <p>放大镜效果🔍</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-s-6">
+                    <div class="works-item">
+                        <a href="./planet/index.html" target="_blank"><img class="imgs"
+                            src="https://s1.ax1x.com/2020/09/10/w84khd.png"
+                            alt="">
+                        <p>CSS3九大星系</p></a>
+                    </div>
+                </div>
+                <div class="col-s-6">
+                    <div class="works-item">
+                        <a href="./chooseTicket/01-电影购票.html" target="_blank"><img class="imgs"
+                            src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3863641969,2726609351&fm=26&gp=0.jpg"
+                            alt="">
+                        <p>电影院选票JQ</p></a>
+                    </div>
+                </div>
+                <div class="col-s-6">
+                    <div class="works-item">
+                        <a href="./jsObjectgame/白块对象方法.html" target="_blank"><img class="imgs"
+                            src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2045337431,223602814&fm=26&gp=0.jpg"
+                            alt="">
+                        <p>别踩白块小游戏(js面向对象)</p></a>
+                    </div>
+                </div>
+                <div class="col-s-6">
+                    <div class="works-item">
+                        <a href="./waterfall/瀑布流布局.html" target="_blank"><img class="imgs"
+                            src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3734273011,3033629646&fm=26&gp=0.jpg"
+                            alt="">
+                        <p>瀑布流布局</p></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="story">
+        <div class="wrap">
+            <h2 class="title">作品📃</h2>
+            <div class="row">
+                <div class="col-s-6">
+                    <div class="works-item">
+                        <a href="./onepickWeather/index.html" target="_blank"><img class="imgs"
+                            src="https://s1.ax1x.com/2020/09/10/wGVzvj.png"
+                            alt="">
+    
+                        <h3>查天气</h3></a>
+                    </div>
+                </div>
+                <div class="col-s-6">
+                    <div class="works-item">
+                        <a href="./oncup/index.html" target="_blank"><img class="imgs"
+                            src="https://s1.ax1x.com/2020/09/10/wGZZ24.png"
+                            alt="">
+                        <h3>来一杯外卖</h3></a>
+                    </div>
+                </div>
+                <!-- <div class="col-m-8">
+                    
+                </div>
+                <div class="col-m-4 center-fixed">
+                    <img src="static/img/story.png"/>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+  
+    <footer>
+        <!-- <p>© 2018 By <a href="http://www.sucai8.cn"title="站长资源" target="_blank">Moreduo</a>.</p> -->
+    </footer>
+</main>
+
+<script src="static/kico.js"></script>
+<script src="static/moreduo.js"></script>
+
+</body>
 </html>
